@@ -20,3 +20,13 @@ spec:
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: "{{ .Values.env.SPRING_PROFILES_ACTIVE }}"
+            - name: DB_HOST
+              value: "{{ .Values.env.DB_HOST }}"
+            - name: DB_PORT
+              value: "{{ .Values.env.DB_PORT }}"
+            - name: DB_NAME
+              value: "{{ .Values.env.DB_NAME }}"
+            - name: DB_USERNAME
+              value: "{{ .Values.env.DB_USERNAME }}"
+            - NAME: DB_PASSWORD
+              VALUE: "{{ .Values.env.DB_PASSWORD }}"
