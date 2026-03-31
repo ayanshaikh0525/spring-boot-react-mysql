@@ -28,5 +28,5 @@ spec:
               value: "{{ .Values.env.DB_NAME }}"
             - name: DB_USERNAME
               value: "{{ .Values.env.DB_USERNAME }}"
-            - NAME: DB_PASSWORD
-              VALUE: "{{ .Values.env.DB_PASSWORD }}"
+            - name: DB_PASSWORD
+              value: "{{ .Values.env.DB_PASSWORD }}"
