@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/ayanshaikh0525/spring-boot-react-mysql
     targetRevision: HEAD
-    path: gitops/helm-charts/spring-app
+    path: gitops-infra/helm-charts/spring-app
 
   destination:
     server: https://kubernetes.default.svc
