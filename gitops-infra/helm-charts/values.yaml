@@ -1,0 +1,15 @@
+replicaCount: 2
+
+image:
+  repository: 928413605425.dkr.ecr.us-east-1.amazonaws.com/crud-backend
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 80
+
+container:
+  port: 8080
+
+env:
+  SPRING_PROFILES_ACTIVE: dev
