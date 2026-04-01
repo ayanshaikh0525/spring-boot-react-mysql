@@ -10,6 +10,9 @@ spec:
     repoURL: https://github.com/ayanshaikh0525/spring-boot-react-mysql
     targetRevision: HEAD
     path: gitops-infra/helm-charts/spring-app
+    helm:
+      valuesFiles:
+        - values-dev.yaml
 
   destination:
     server: https://kubernetes.default.svc
