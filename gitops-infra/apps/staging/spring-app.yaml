@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: gitops-infra/helm-charts/spring-app
     helm:
-      valuesFiles:
+      valueFiles:
         - values-staging.yaml
 
   destination:
