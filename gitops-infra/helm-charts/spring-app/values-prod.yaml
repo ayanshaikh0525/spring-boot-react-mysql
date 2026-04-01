@@ -16,10 +16,3 @@ ingress:
   path: /api
   order: "1"
 
-env:
-  SPRING_PROFILES_ACTIVE: prod
-  DB_HOST: database-1.c0f08e8sy7uu.us-east-1.rds.amazonaws.com
-  DB_PORT: 3306
-  DB_NAME: app_db
-  DB_USERNAME: root
-  DB_PASSWORD: password
