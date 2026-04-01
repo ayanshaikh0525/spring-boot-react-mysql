@@ -1,20 +1,28 @@
+{{- if .Values.ingress.enabled }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: spring-app-ingress
-  namespace: dev
   annotations:
+    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
+
+    # SINGLE ALB FOR ALL ENV
+    alb.ingress.kubernetes.io/group.name: spring-app
+
+    # Optional ordering (prod > staging > dev if needed)
+    alb.ingress.kubernetes.io/group.order: "{{ .Values.ingress.order }}"
+
 spec:
-  ingressClassName: alb  
   rules:
     - http:
         paths:
-          - path: /api
+          - path: {{ .Values.ingress.path }}
             pathType: Prefix
             backend:
               service:
                 name: spring-app
                 port:
                   number: 80
+{{- end }}
