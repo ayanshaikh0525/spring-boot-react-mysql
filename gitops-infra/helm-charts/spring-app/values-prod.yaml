@@ -11,6 +11,11 @@ service:
 container:
   port: 8080
 
+ingress:
+  enabled: true
+  path: /prod/api
+  order: "1"
+
 env:
   SPRING_PROFILES_ACTIVE: prod
   DB_HOST: database-1.c0f08e8sy7uu.us-east-1.rds.amazonaws.com
