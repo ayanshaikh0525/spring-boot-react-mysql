@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spring-app-dev
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/ayanshaikh0525/spring-boot-react-mysql
+    targetRevision: HEAD
+    path: gitops-infra/helm-charts/spring-app
+    helm:
+      valuesFiles:
+        - values-prod.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
