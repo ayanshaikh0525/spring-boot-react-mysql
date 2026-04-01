@@ -13,6 +13,7 @@ container:
   
 ingress:
   enabled: true
+  albName: prod-alb
   
 env:
   SPRING_PROFILES_ACTIVE: prod
