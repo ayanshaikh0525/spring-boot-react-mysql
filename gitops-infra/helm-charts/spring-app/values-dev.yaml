@@ -13,7 +13,7 @@ container:
 
 ingress:
   enabled: true
-  path: /dev/api
+  path: /api
   order: "3"
 
 env:
