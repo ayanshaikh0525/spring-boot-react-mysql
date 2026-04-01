@@ -13,6 +13,7 @@ container:
   
 ingress:
   enabled: true
+  albName: staging-alb
   
 env:
   SPRING_PROFILES_ACTIVE: staging
