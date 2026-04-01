@@ -8,12 +8,6 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
 
-    # SINGLE ALB FOR ALL ENV
-    alb.ingress.kubernetes.io/group.name: spring-app
-
-    # Optional ordering (prod > staging > dev if needed)
-    alb.ingress.kubernetes.io/group.order: "{{ .Values.ingress.order }}"
-
 spec:
   rules:
     - http:
