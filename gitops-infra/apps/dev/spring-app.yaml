@@ -11,6 +11,7 @@ spec:
     targetRevision: HEAD
     path: gitops-infra/helm-charts/spring-app
     helm:
+      releaseName: spring-app-dev
       valueFiles:
         - values-dev.yaml
 
