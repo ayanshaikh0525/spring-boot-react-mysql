@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: spring-app-dev
+  name: spring-app-prod
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,6 @@ spec:
     targetRevision: HEAD
     path: gitops-infra/helm-charts/spring-app
     helm:
-      releaseName: spring-app-prod
       valueFiles:
         - values-prod.yaml
 
