@@ -13,7 +13,7 @@ container:
 
 ingress:
   enabled: true
-  path: /prod/api
+  path: /api
   order: "1"
 
 env:
