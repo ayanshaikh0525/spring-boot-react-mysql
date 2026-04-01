@@ -13,8 +13,6 @@ container:
   
 ingress:
   enabled: true
-  path: /api
-  order: "1"
   
 env:
   SPRING_PROFILES_ACTIVE: prod
