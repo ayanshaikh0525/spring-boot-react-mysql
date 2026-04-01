@@ -13,8 +13,6 @@ container:
   
 ingress:
   enabled: true
-  path: /staging/api
-  order: "2"
   
 env:
   SPRING_PROFILES_ACTIVE: staging
