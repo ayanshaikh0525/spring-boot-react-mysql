@@ -13,6 +13,7 @@ container:
 
 ingress:
   enabled: true
+  albName: dev-alb
 
 env:
   SPRING_PROFILES_ACTIVE: dev
