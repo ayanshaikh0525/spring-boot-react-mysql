@@ -26,3 +26,21 @@ variable "db_allocated_storage" {}
 variable "multi_az" { type = bool }
 
 variable "identifier" {}
+
+
+
+variable "cluster_name" {}
+variable "cluster_version" {}
+
+# variable "vpc_id" {}
+
+# variable "subnet_ids" {
+#   type = list(string)
+# }
+
+# variable "private_subnet_ids" {
+#   type = list(string)
+# }
+
+
+

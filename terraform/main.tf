@@ -34,3 +34,26 @@ module "rds" {
 
   tags = var.tags
 }
+
+
+
+
+
+module "eks" {
+  source = "./modules/eks"
+
+  cluster_name = var.cluster_name
+  cluster_version = var.cluster_version
+
+  vpc_id = module.vpc.vpc_id
+
+  # 🚨 IMPORTANT: Exclude DB subnets
+  subnet_ids = concat(
+    module.vpc.public_subnets,
+    module.vpc.private_app_subnets
+  )
+
+  private_subnet_ids = module.vpc.private_app_subnets
+
+  tags = var.tags
+}
