@@ -1,13 +1,15 @@
-variable "vpc_cidr" {}
-variable "azs" { type = list(string) }
+module "vpc" {
+  source = "./modules/vpc"
 
-variable "public_subnets" { type = list(string) }
-variable "private_app_subnets" { type = list(string) }
-variable "private_db_subnets" { type = list(string) }
+  vpc_cidr = var.vpc_cidr
 
-variable "enable_nat_gateway" { default = true }
+  azs = var.azs
 
-variable "tags" {
-  type    = map(string)
-  default = {}
+  public_subnets       = var.public_subnets
+  private_app_subnets  = var.private_app_subnets
+  private_db_subnets   = var.private_db_subnets
+
+  enable_nat_gateway = var.enable_nat_gateway
+
+  tags = var.tags
 }
