@@ -13,3 +13,24 @@ module "vpc" {
 
   tags = var.tags
 }
+
+
+module "rds" {
+  source = "./modules/rds"
+
+  identifier = var.identifier
+
+  vpc_id             = module.vpc.vpc_id
+  db_subnet_ids      = module.vpc.private_db_subnets
+
+  db_name            = var.db_name
+  username           = var.db_username
+  password           = var.db_password
+
+  instance_class     = var.db_instance_class
+  allocated_storage  = var.db_allocated_storage
+
+  multi_az           = var.multi_az
+
+  tags = var.tags
+}
