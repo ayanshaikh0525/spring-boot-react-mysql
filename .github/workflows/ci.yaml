@@ -58,7 +58,7 @@ jobs:
 
       - name: Update Helm values.yaml
         run: |
-          sed -i "s/tag:.*/tag: ${{ github.sha }}/" helm/values.yaml
+          sed -i "s/tag:.*/tag: ${{ github.sha }}/" gitops-infra/helm-charts/spring-app/values-dev.yaml
 
       - name: Commit & Push Changes
         run: |
