@@ -20,6 +20,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Print config
+        run: |
+          echo $AWS_ACCESS_KEY_ID
+          echo $AWS_SECRET_ACCESS_KEY
+          echo $AWS_REGION
+          echo $AWS_ACCOUNT_ID
+          echo $ECR_REPOSITORY
+
       - name: Login to ECR
         run: |
           aws ecr get-login-password --region $AWS_REGION | \
