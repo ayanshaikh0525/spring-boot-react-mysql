@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: 928413605425.dkr.ecr.us-east-1.amazonaws.com/crud-backend
-  tag: 043517e36388430487fb18c006d5177627ffb763
+  tag: a33449a6cccc4ea21d213c03a3402006f07ba5f5
 
 service:
   type: ClusterIP
