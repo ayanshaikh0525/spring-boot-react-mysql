@@ -32,7 +32,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          cd spring-boot-server \
+          cd spring-boot-server 
           docker build -t $ECR_REPOSITORY:${{ github.sha }} .
 
       - name: Tag Image for ECR
