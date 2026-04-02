@@ -32,15 +32,10 @@ variable "identifier" {}
 variable "cluster_name" {}
 variable "cluster_version" {}
 
-# variable "vpc_id" {}
+variable "repository_name" {}
 
-# variable "subnet_ids" {
-#   type = list(string)
-# }
-
-# variable "private_subnet_ids" {
-#   type = list(string)
-# }
-
+variable "image_tag_mutability" {
+  default = "MUTABLE"
+}
 
 
