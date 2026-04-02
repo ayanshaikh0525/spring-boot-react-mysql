@@ -1,0 +1,13 @@
+variable "vpc_cidr" {}
+variable "azs" { type = list(string) }
+
+variable "public_subnets" { type = list(string) }
+variable "private_app_subnets" { type = list(string) }
+variable "private_db_subnets" { type = list(string) }
+
+variable "enable_nat_gateway" { default = true }
+
+variable "tags" {
+  type    = map(string)
+  default = {}
+}
