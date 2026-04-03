@@ -39,5 +39,3 @@ variable "image_tag_mutability" {
 }
 
 
-variable "staging_identifier" {}
-variable "prod_identifier" {}
