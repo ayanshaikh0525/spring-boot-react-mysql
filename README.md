@@ -419,14 +419,63 @@ http://<ALB-DNS>/api
 
 ## 🌍 Step 11: Setup Frontend (Vercel)
 
-1. Deploy React app on Vercel
-2. Add environment variable:
+## 🚀 Deploy React App on Vercel
 
-```text
-VITE_API_URL=http://<ALB-DNS>/api
-```
+Follow these steps to deploy the React frontend (`react-client`) on Vercel:
 
 ---
+
+### 1️⃣ Login to Vercel
+- Go to the Vercel dashboard
+- Sign in using your GitHub account
+
+---
+
+### 2️⃣ Create a New Project
+- Click on **“Add New Project”**
+- Select **“Import Git Repository”**
+
+---
+
+### 3️⃣ Import Your GitHub Repository
+- Choose your repository from the list
+- Click **Import**
+
+---
+
+### 4️⃣ Configure Project Settings
+- **Framework Preset:** `Create React App`
+- **Root Directory:** `react-client`
+
+---
+
+
+---
+
+### 5️⃣ Add Environment Variable (Important ⚠️)
+
+Before deploying, configure the following environment variable:
+
+- **Key:** `REACT_APP_API_URL`
+- **Value:** `https://cludfronntns.com`
+
+
+
+---
+
+### 6️⃣ Deploy
+- Click **Deploy**
+- Vercel will build and deploy your application
+
+---
+
+### ✅ After Deployment
+- You will receive a live URL
+- Any push to the main branch will automatically trigger redeployment
+
+---
+
+
 
 ## 🔄 Step 12: CI/CD Flow
 
