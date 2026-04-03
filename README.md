@@ -414,8 +414,50 @@ Test:
 ```text
 http://<ALB-DNS>/api
 ```
+---
+
+## 🌐 Connect AWS Load Balancer (ALB) to CloudFront
+
+Follow these steps to route your traffic from CloudFront → Application Load Balancer (ALB):
 
 ---
+
+### 2️⃣ Create a CloudFront Distribution
+- Go to AWS Console → CloudFront
+- Click **Create Distribution**
+
+---
+
+### 3️⃣ Configure Origin Settings
+
+- **Origin Domain Name:** <alb-dns>
+
+- **Origin Protocol Policy:** HTTP Only   (or HTTPS Only if ALB has SSL)
+  
+- **Origin Name:** alb-origin
+
+---
+
+### 4️⃣ Configure Default Cache Behavior
+
+- **Viewer Protocol Policy:** <alb-dns>
+
+- **Allowed HTTP Methods:** HTTP Only   (or HTTPS Only if ALB has SSL)
+  
+- **Cache Policy:** alb-origin
+- **Origin Request Policy:** AllViewer
+- **Response headers policy:** CORS-With-Preflight
+
+---
+
+### 5️⃣ Create Distribution
+
+- **Click Create Distribution**
+
+- **Wait for deployment (~5–10 minutes)**
+
+---
+
 
 ## 🌍 Step 11: Setup Frontend (Vercel)
 
@@ -457,9 +499,7 @@ Follow these steps to deploy the React frontend (`react-client`) on Vercel:
 Before deploying, configure the following environment variable:
 
 - **Key:** `REACT_APP_API_URL`
-- **Value:** `https://cludfronntns.com`
-
-
+- **Value:** <https://cloudfront-domain-name> eg:- https://d3gb2d21prach0.cloudfront.net
 
 ---
 
