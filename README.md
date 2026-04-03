@@ -1,4 +1,5 @@
 # 🚀 GitOps-Based Kubernetes Deployment on AWS (EKS + ArgoCD + Terraform)
+<img width="1536" height="1024" alt="ChatGPT Image Apr 3, 2026, 09_45_09 AM" src="https://github.com/user-attachments/assets/7d8840a5-f8d0-4d8d-b7b0-c4be637ebfdd" />
 
 ## 📌 Overview
 
